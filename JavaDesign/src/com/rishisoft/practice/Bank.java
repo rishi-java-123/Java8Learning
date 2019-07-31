@@ -2,53 +2,59 @@ package com.rishisoft.practice;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class Bank {
-	private Map<Integer, Integer> accountDetails = new HashMap<>();
+	private Map<Integer, BankAccount> accountDetails = new HashMap<>();
 	private double rate = 0.01;
-	private int nextAccount=1;
+	private int nextAccount = 1;
 
-	public int newAccount() {
+	public int newAccount(boolean isForeign) {
 		int accountNumber = nextAccount++;
-		accountDetails.put(0, accountNumber);
+		BankAccount ba = new BankAccount(accountNumber);
+		ba.setForeign(isForeign);
+		accountDetails.put(accountNumber, ba);
 		return accountNumber;
 	}
 
 	public void deposit(int accountNumber, int amount) {
-		int balance = accountDetails.get(accountNumber);
-		accountDetails.put(accountNumber, balance + amount);
+		BankAccount ba = accountDetails.get(accountNumber);
+		int balance = ba.getBalance();
+		ba.setBalance(balance + amount);
 
 	}
 
 	public int getBalance(int accountNumber) {
-		int currentBalance = accountDetails.get(accountNumber);
-		return currentBalance;
+		BankAccount ba = accountDetails.get(accountNumber);
+		return ba.getBalance();
 	}
 
 	public String toString() {
-		Set<Integer> accts = accountDetails.keySet();
-		String result = "The bank has " + accts.size() + "accounts.";
-		for (int i : accts) {
-			result += "\n\tAccount " + i + ": balance=" + accountDetails.get(i);
-		}
-		return result;
+	      String result = "The bank has " + accountDetails.size() + " accounts.";
+	      for (BankAccount ba : accountDetails.values()) 
+	         result += "\n\tAccount " + ba.getAccountNum() + ": balance=" 
+	               + ba.getBalance() + ", is "
+	               + (ba.isForeign() ? "foreign" : "domestic");
+	      return result;
+	   }
 
+	public void setForeign(int acctnum, boolean isforeign) {
+		BankAccount ba = accountDetails.get(acctnum);
+		ba.setForeign(isforeign);
 	}
 
 	public void addInterest() {
-		Set<Integer> accts = accountDetails.keySet();
-		for (int i : accts) {
-			int balance = accountDetails.get(i);
-			int newBalance = (int) (balance * (1 + rate));
-			accountDetails.put(i, newBalance);
+		for (BankAccount ba : accountDetails.values()) {
+			int balance = ba.getBalance();
+			balance += (int) (balance * rate);
+			ba.setBalance(balance);
 		}
 	}
-	
-	public boolean authorizeLoan(int accountNumber, int loanAmount){
-		Integer balance = accountDetails.get(accountNumber);
-		return balance>= loanAmount/2;
-		
+
+	public boolean authorizeLoan(int accountNumber, int loanAmount) {
+		BankAccount bankAccount = accountDetails.get(accountNumber);
+		int currentBalance = bankAccount.getBalance();
+		return currentBalance >= loanAmount / 2;
+
 	}
 
 }
