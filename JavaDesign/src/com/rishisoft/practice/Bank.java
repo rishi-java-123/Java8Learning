@@ -1,12 +1,15 @@
 package com.rishisoft.practice;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Bank {
-	private Map<Integer, BankAccount> accountDetails = new HashMap<>();
-	private double rate = 0.01;
-	private int nextAccount = 1;
+	private HashMap<Integer,BankAccount> accountDetails;
+	   private int nextAccount;
+
+	   public Bank(HashMap<Integer,BankAccount> accounts, int n) {
+	      this.accountDetails = accounts;
+	      nextAccount = n;
+	   }
 
 	public int newAccount(boolean isForeign) {
 		int accountNumber = nextAccount++;
@@ -18,8 +21,7 @@ public class Bank {
 
 	public void deposit(int accountNumber, int amount) {
 		BankAccount ba = accountDetails.get(accountNumber);
-		int balance = ba.getBalance();
-		ba.setBalance(balance + amount);
+	      ba.deposit(amount);
 
 	}
 
@@ -30,10 +32,8 @@ public class Bank {
 
 	public String toString() {
 	      String result = "The bank has " + accountDetails.size() + " accounts.";
-	      for (BankAccount ba : accountDetails.values()) 
-	         result += "\n\tAccount " + ba.getAccountNum() + ": balance=" 
-	               + ba.getBalance() + ", is "
-	               + (ba.isForeign() ? "foreign" : "domestic");
+	      for (BankAccount ba : accountDetails.values())
+	         result += "\n\t" + ba.toString();
 	      return result;
 	   }
 
@@ -44,17 +44,14 @@ public class Bank {
 
 	public void addInterest() {
 		for (BankAccount ba : accountDetails.values()) {
-			int balance = ba.getBalance();
-			balance += (int) (balance * rate);
-			ba.setBalance(balance);
+			ba.addInterest();
 		}
 	}
 
 	public boolean authorizeLoan(int accountNumber, int loanAmount) {
 		BankAccount bankAccount = accountDetails.get(accountNumber);
-		int currentBalance = bankAccount.getBalance();
-		return currentBalance >= loanAmount / 2;
-
+		
+		return bankAccount.hasEnoughCollateral(loanAmount);
 	}
 
 }

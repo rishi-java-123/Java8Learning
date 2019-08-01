@@ -6,12 +6,18 @@ public class BankClient {
 	private int current = 0;
 	private Scanner scanner;
 	private boolean done = false;
-	private Bank bank = new Bank();
+	private Bank bank;
+
+	public BankClient(Scanner scanner, Bank bank) {
+		this.scanner = scanner;
+		this.bank = bank;
+	}
 
 	public void run() {
 		scanner = new Scanner(System.in);
 		while (!done) {
-			System.out.print("Enter command (0=quit, 1=new, 2=select, 3=deposit, 4=loan, 5=show, 6=interest, 7=setforeign): ");
+			System.out.print(
+					"Enter command (0=quit, 1=new, 2=select, 3=deposit, 4=loan, 5=show, 6=interest, 7=setforeign): ");
 			int cnum = scanner.nextInt();
 			processCommand(cnum);
 		}
@@ -33,7 +39,8 @@ public class BankClient {
 			showAll();
 		else if (cnum == 6)
 			addInterest();
-		else if (cnum == 7) setForeign();
+		else if (cnum == 7)
+			setForeign();
 		else
 			System.out.println("illegal command");
 	}
@@ -73,7 +80,7 @@ public class BankClient {
 	}
 
 	private void showAll() {
-		 System.out.println(bank.toString());
+		System.out.println(bank.toString());
 	}
 
 	private void addInterest() {

@@ -2,11 +2,10 @@ package com.rishisoft.practice;
 
 public class BankAccount {
 
+	private double rate = 0.01;
 	private int accountNum;
 	private int balance = 0;
-	private boolean foreign;
-	
-	
+	private boolean isforeign = false;
 
 	public BankAccount(int accountNum) {
 		super();
@@ -30,11 +29,27 @@ public class BankAccount {
 	}
 
 	public boolean isForeign() {
-		return foreign;
+		return isforeign;
 	}
 
 	public void setForeign(boolean foreign) {
-		this.foreign = foreign;
+		this.isforeign = foreign;
+	}
+
+	public void deposit(int amt) {
+		balance += amt;
+	}
+
+	public boolean hasEnoughCollateral(int loanamt) {
+		return balance >= loanamt / 2;
+	}
+
+	public String toString() {
+		return "Account " + accountNum + ": balance=" + balance + ", is " + (isforeign ? "foreign" : "domestic");
+	}
+
+	public void addInterest() {
+		balance += (int) (balance * rate);
 	}
 
 }
