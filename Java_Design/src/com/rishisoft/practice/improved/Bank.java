@@ -1,12 +1,13 @@
 package com.rishisoft.practice.improved;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Bank {
-   private HashMap<Integer,BankAccount> accounts;
+   private Map<Integer,BankAccount> accounts;
    private int nextacct;
 
-   public Bank(HashMap<Integer,BankAccount> accounts, int n) {
+   public Bank(Map<Integer,BankAccount> accounts, int n) {
       this.accounts = accounts;
       nextacct = n;
    }

@@ -1,6 +1,6 @@
 package com.rishisoft.practice.improved;
 
-public class CurrentAccount implements BankAccount{
+public class CurrentAccount implements BankAccount,Comparable<BankAccount>{
 
 	private int acctnum;
 	   private int balance = 0;
@@ -37,5 +37,24 @@ public class CurrentAccount implements BankAccount{
 	   public String toString() {
 	      return "Checking account " + acctnum + ": balance=" + balance 
 	            + ", is " + (isforeign ? "foreign" : "domestic");
+	   }
+
+	@Override
+	public int compareTo(BankAccount o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void addInterest() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public boolean equals(Object obj) {
+	      if (! (obj instanceof CurrentAccount))
+	         return false;
+	      CurrentAccount ba = (CurrentAccount) obj;
+	      return getAcctNum() == ba.getAcctNum();
 	   }
 	}
