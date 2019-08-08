@@ -40,9 +40,13 @@ public class CurrentAccount implements BankAccount,Comparable<BankAccount>{
 	   }
 
 	@Override
-	public int compareTo(BankAccount o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(BankAccount ba) {
+		int bal1 = getBalance();
+		int bal2 = ba.getBalance();
+		if (bal1 == bal2)
+			return getAcctNum() - ba.getAcctNum();
+		else
+			return bal1 - bal2;
 	}
 
 	@Override

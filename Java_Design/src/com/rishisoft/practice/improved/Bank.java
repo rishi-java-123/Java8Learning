@@ -1,6 +1,5 @@
 package com.rishisoft.practice.improved;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class Bank {
@@ -53,9 +52,6 @@ public class Bank {
 
    public void addInterest() {
       for (BankAccount ba : accounts.values())
-         if (ba instanceof SavingsAccount) {
-            SavingsAccount sa = (SavingsAccount) ba;
-            sa.addInterest();
-         }
+         ba.addInterest();
    }
 }
