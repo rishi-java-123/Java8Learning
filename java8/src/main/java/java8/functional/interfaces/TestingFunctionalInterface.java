@@ -3,6 +3,7 @@ package java8.functional.interfaces;
 public class TestingFunctionalInterface {
 	
 	public static void main(String[] args) {
+		
 		StringProcessor sonp = new StringProcessor() {
 			
 			@Override
