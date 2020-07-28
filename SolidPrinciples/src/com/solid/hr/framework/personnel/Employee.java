@@ -57,8 +57,8 @@ public abstract class Employee {
     public String getFullName(){
         return this.firstName + " " + this.lastName;
     }
-
-    public static void save(Employee employee){
+// As part of refactoriandoowing SRP moving this to persistence class
+   /* public static void save(Employee employee){
         StringBuilder sb = new StringBuilder();
         sb.append("### EMPLOYEE RECORD ####");
         sb.append(System.lineSeparator());
@@ -82,7 +82,7 @@ public abstract class Employee {
         } catch (IOException e) {
             System.out.println("ERROR: Could not save employee. " + e);
         }
-    }
+    }*/
 
 
 
