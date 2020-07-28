@@ -26,9 +26,9 @@ class EmployeeRepository {
     List < Employee > findAll ( ) {
 
         Employee rishi1 = new FullTimeEmployee ( "rishi ranjan" , 20000 );
-        Employee rishi2 = new FullTimeEmployee ( "rish ran" , 20000 );
-        Employee rishi3 = new PartTimeEmployee ( "ris ran" , 20000 );
-        Employee rishi4 = new PartTimeEmployee ( "rishi ranjana" , 20000 );
+        Employee rishi2 = new FullTimeEmployee ( "rish ran" , 40000 );
+        Employee rishi3 = new PartTimeEmployee ( "ris ran" , 10000 );
+        Employee rishi4 = new PartTimeEmployee ( "rishi ranjana" , 3000 );
         return Arrays.asList ( rishi1 , rishi2 , rishi3 , rishi4 );
     }
 
