@@ -6,7 +6,9 @@ import com.solid.hr.framework.persistence.EmployeeRepository;
 import com.solid.hr.framework.personnel.Employee;
 
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class main {
     public static
@@ -15,6 +17,7 @@ public class main {
         ConsoleLogger consoleLogger = new ConsoleLogger();
 
         EmployeeRepository repository = new EmployeeRepository( employeeFileSerializer);
+
         List < Employee > employees = repository.findAll();
         for (Employee e : employees){
             try {
