@@ -13,9 +13,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -29,6 +36,92 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\SolidPrinciples\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ExportPayslipMain">
+    <configuration name="ApproveSLAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solid.hr.framework.client.ApproveSLAMain" />
+      <module name="SolidPrinciples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solid.hr.framework.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExportPayslipMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solid.hr.framework.client.ExportPayslipMain" />
+      <module name="SolidPrinciples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solid.hr.framework.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainClientForTax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solid.hr.framework.client.MainClientForTax" />
+      <module name="SolidPrinciples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solid.hr.framework.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NatHolidayEmployeeTimeOffMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solid.hr.framework.client.NatHolidayEmployeeTimeOffMain" />
+      <module name="SolidPrinciples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solid.hr.framework.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.solid.hr.framework.client.main" />
+      <module name="SolidPrinciples" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.solid.hr.framework.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ExportPayslipMain" />
+        <item itemvalue="Application.MainClientForTax" />
+        <item itemvalue="Application.NatHolidayEmployeeTimeOffMain" />
+        <item itemvalue="Application.ApproveSLAMain" />
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,13 +137,53 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1683" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1595959141322">
+    <state x="1470" y="25" key="#Project_Structure" timestamp="1596045699783">
       <screen x="1366" y="0" width="1024" height="728" />
     </state>
-    <state x="1683" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1595959141322" />
-    <state x="1534" y="162" key="run.anything.popup" timestamp="1595959279510">
+    <state x="1470" y="25" key="#Project_Structure/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045699783" />
+    <state x="1683" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1596009315851">
       <screen x="1366" y="0" width="1024" height="728" />
     </state>
-    <state x="1534" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1595959279510" />
+    <state x="1683" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596009315851" />
+    <state x="1605" y="56" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1596045041216">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1605" y="56" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045041216" />
+    <state x="1658" y="122" key="FileChooserDialogImpl" timestamp="1596008435327">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1658" y="122" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596008435327" />
+    <state width="981" height="179" key="GridCell.Tab.0.bottom" timestamp="1596045795027">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1596012735183" />
+    <state width="981" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045795027" />
+    <state width="981" height="179" key="GridCell.Tab.0.center" timestamp="1596045795027">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1596012735183" />
+    <state width="981" height="179" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045795027" />
+    <state width="981" height="179" key="GridCell.Tab.0.left" timestamp="1596045795027">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1596012735183" />
+    <state width="981" height="179" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045795027" />
+    <state width="981" height="179" key="GridCell.Tab.0.right" timestamp="1596045795027">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1024.728@0.0.1366.728" timestamp="1596012735183" />
+    <state width="981" height="179" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045795027" />
+    <state x="1366" y="0" key="SettingsEditor" timestamp="1596045367136">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1366" y="0" key="SettingsEditor/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1596045367136" />
+    <state x="1547" y="0" width="662" height="728" key="find.popup" timestamp="1595963549552">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1547" y="0" width="662" height="728" key="find.popup/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1595963549552" />
+    <state x="1534" y="162" key="run.anything.popup" timestamp="1595964221067">
+      <screen x="1366" y="0" width="1024" height="728" />
+    </state>
+    <state x="1534" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1024.728@1366.0.1024.728" timestamp="1595964221067" />
   </component>
 </project>
