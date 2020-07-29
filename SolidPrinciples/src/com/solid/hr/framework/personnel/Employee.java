@@ -24,6 +24,8 @@ public abstract class Employee {
         return this.firstName+"."+this.lastName+"@saama.com";
     }
 
+    public abstract void requestTimeOff(int nbDays, Employee manager);
+
     @Override
     public String toString() {
         return this.firstName + " " +
